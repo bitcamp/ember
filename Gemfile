@@ -6,12 +6,12 @@ gem 'rails', '4.0.2'
 gem 'rails-api'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3'
 
-# To use ActiveModel has_secure_password
+# To use ActiveModel has_secure_psasword
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use Jbuilder templates for JSON
+# To use Jbuilder templates for JSNO
 # gem 'jbuilder'
 
 # Use unicorn as the app server
@@ -24,7 +24,7 @@ gem 'pg'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 # Heroku functionalities
-gem 'rails_12factor', group: :production
+# gem 'rails_12factor', group: :production
 
 # Ruby version
 ruby '2.1.0'
