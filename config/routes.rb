@@ -13,6 +13,7 @@ Ember::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  get 'test/', to: "about#fine"
 
   # Example resource route with options:
   #   resources :products do
@@ -24,7 +25,8 @@ Ember::Application.routes.draw do
   #     collection do
   #       get 'sold'
   #     end
-  #   end
+ 
+   # g
 
   # Example resource route with sub-resources:
   #   resources :products do

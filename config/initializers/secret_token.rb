@@ -17,3 +17,4 @@
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
 Ember::Application.config.secret_token = 'd67e101829bda104d94369f0c4744fe56e930d188642ee9a988790d763b0111dfd95d96d58e9e92624ea2ed97abf27ec4ebfdb68087407d8ccdf4184fd209340'
+Ember::Application.config.secret_key_base = 'jeff'
