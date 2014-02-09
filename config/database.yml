@@ -5,9 +5,11 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  dbname: ember
-  user: ember
-  password: bitcampchillin
+  database: bitcamp_emberdb
+  host: localhost
+  pool: 5
+  username: ember
+  password: temp
 
 
 # Warning: The database defined as "test" will be erased and
@@ -16,6 +18,8 @@ development:
 
 production:
   adapter: postgresql
-  dbname: ember
-  user: ember
-  password: bitcampchillin
+  database: bitcamp_emberdb
+  host: localhost
+  pool: 5
+  username: ember
+  password: temp
