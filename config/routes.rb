@@ -1,4 +1,5 @@
 Ember::Application.routes.draw do
+  scope(:path => '/api') do 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,6 +14,7 @@ Ember::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  root 'about#home'
   get 'test/', to: "about#fine"
 
 
@@ -56,4 +58,5 @@ Ember::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  end
 end
