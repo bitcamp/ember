@@ -15,6 +15,7 @@ Ember::Application.routes.draw do
   #   resources :products
   get 'test/', to: "about#fine"
 
+
   # Example resource route with options:
   #   resources :products do
   #     member do
