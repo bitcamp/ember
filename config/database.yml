@@ -18,8 +18,8 @@ development:
 
 production:
   adapter: postgresql
-  database: bitcamp_emberdb
-  host: localhost
+  database: <%= ENV['RAILS_DB_NAME'] %>
+  host: <%= ENV['RAILS_DB_HOST'] %>
   pool: 5
-  username: ember
-  password: temp
+  username: <%= ENV['RAILS_DB_USR'] %>
+  password: <%= ENV['RAILS_DB_PWD'] %>

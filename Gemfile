@@ -23,8 +23,8 @@ gem 'pg'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-# Heroku functionalities
-# gem 'rails_12factor', group: :production
+# Environmental variable loading gem
+gem 'dotenv-rails', :groups => [:production]
 
 # Ruby version
 ruby '2.1.0'
