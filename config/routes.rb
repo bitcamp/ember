@@ -17,6 +17,7 @@ Ember::Application.routes.draw do
     
    # get 'test/', to: "about#fine"
     post 'signup', to: "about#signup"
+    get 'bitcamp', to: "about#heartbeat"
 
 
     # Example resource route with options:

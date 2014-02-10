@@ -12,4 +12,8 @@ class AboutController < ApplicationController
 		render :nothing => true, :status => :unauthorized
 	end
 
+	def heartbeat
+		render :nothing => true
+	end
 end
+w
