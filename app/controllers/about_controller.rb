@@ -16,4 +16,3 @@ class AboutController < ApplicationController
 		render :nothing => true
 	end
 end
-w
