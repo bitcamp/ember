@@ -24,7 +24,7 @@ gem 'pg'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 # Environmental variable loading gem
-gem 'dotenv-rails', :groups => [:production]
+gem 'dotenv-rails'
 
 # Ruby version
 ruby '2.1.0'

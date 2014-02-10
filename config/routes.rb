@@ -14,9 +14,9 @@ Ember::Application.routes.draw do
 
     # Example resource route (maps HTTP verbs to controller actions automatically):
     #   resources :products
-    root 'about#home'
+    
    # get 'test/', to: "about#fine"
-    get 'signup', to: "about#signup"
+    post 'signup', to: "about#signup"
 
 
     # Example resource route with options:

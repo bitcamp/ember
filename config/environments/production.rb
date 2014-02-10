@@ -1,6 +1,7 @@
 Ember::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -77,4 +78,15 @@ Ember::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Mail Configuration
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => ENV['RAILS_MAIL_SERVER'],
+    :domain               => ENV['RAILS_MAIL_DOMAIN'],
+    :user_name            => ENV['RAILS_MAIL_USER'],
+    :password             => ENV['RAILS_MAIL_PASS'],
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  
+  }
 end
