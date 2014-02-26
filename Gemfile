@@ -9,7 +9,7 @@ gem 'rails-api'
 gem 'pg'
 
 # To use ActiveModel has_secure_psasword
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # To use Jbuilder templates for JSNO
 # gem 'jbuilder'

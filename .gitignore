@@ -18,3 +18,9 @@
 
 # Ignore local environment variables
 /.env
+
+# Ignore Sublimes Project Files
+/Ember.sublime-project
+/Ember.sublime-workspace
+
+/public/site/*
