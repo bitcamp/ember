@@ -1,6 +1,5 @@
 class AboutController < ApplicationController
 	include ActionController::MimeResponds
-	before_filter :restrict_access
 	
 	def signup
 		info = Preregister.new(name: params[:name], email: params[:email], 
