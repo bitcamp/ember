@@ -19,7 +19,13 @@ Ember::Application.routes.draw do
     post 'signup', to: "about#signup"
     get 'bitcamp', to: "about#heartbeat"
 
-    post ':controller(/:action(/:id))'
+    post 'login', to: "session#login"
+    get 'logout', to: "session#logout"
+
+    post 'register', to: "session#register"
+    put 'profile', to: "profile#update"
+    get 'profile', to: "profile#read"
+
 
 
 

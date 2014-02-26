@@ -25,7 +25,7 @@ class SessionController < ApplicationController
 			password_confirmation: params[:confirm])
 		if user.save()
 			message = PrimaryMailer.registration(user.email, user.active)
-			#message.deliver
+			message.deliver
 			render nothing: true and return
 		end
 		render :json => user.errors.messages, :status => :unauthorized
