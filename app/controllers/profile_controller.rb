@@ -5,7 +5,7 @@ class ProfileController < ApplicationController
 		if @current_user.profile == nil
 			@current_user.profile = Profile.new
 		end
-		render :json => @current_user.profile, :only=>[:first, :last, :school, :website, :github, :blurb, :done]
+		render :json => @current_user.profile, :only=>[:first, :last, :school, :website, :github, :blurb, :complete]
 	end
 
 	def update
@@ -22,6 +22,6 @@ class ProfileController < ApplicationController
     # since you'll be able to reuse the same permit list between create and update. Also, you
     # can specialize this method with per-user checking of permissible attributes.
     def profile_params
-      params.require(:profile).permit(:first, :last, :school, :blurb, :github, :website, :done)
+      params.require(:profile).permit(:first, :last, :school, :blurb, :github, :website, :complete)
     end
 end
