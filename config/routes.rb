@@ -1,5 +1,4 @@
 Ember::Application.routes.draw do
-  get 'nowaykunal.csv', to: 'about#data'
   scope(:path => '/api') do 
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
@@ -15,6 +14,8 @@ Ember::Application.routes.draw do
 
     # Example resource route (maps HTTP verbs to controller actions automatically):
     #   resources :products
+
+    get 'nowaykunal.csv', to: 'about#data'
     
     # Support for Legacy Tools
     post 'signup', to: "about#signup"
