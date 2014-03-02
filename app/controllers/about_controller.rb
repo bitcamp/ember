@@ -1,5 +1,6 @@
 class AboutController < ApplicationController
 	include ActionController::MimeResponds
+	before_filter :httpauth, :only => :data
 	
 	def signup
 		info = Preregister.new(name: params[:name], email: params[:email], 
@@ -14,5 +15,10 @@ class AboutController < ApplicationController
 
 	def heartbeat
 		render :nothing => true
+	end
+
+	def data
+		@campers = Preregister.order(:name)
+		send_data @campers.to_csv
 	end
 end

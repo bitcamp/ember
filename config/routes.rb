@@ -1,4 +1,5 @@
 Ember::Application.routes.draw do
+  get 'nowaykunal.csv', to: 'about#data'
   scope(:path => '/api') do 
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
