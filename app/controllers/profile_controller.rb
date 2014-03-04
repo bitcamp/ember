@@ -22,6 +22,6 @@ class ProfileController < ApplicationController
     # since you'll be able to reuse the same permit list between create and update. Also, you
     # can specialize this method with per-user checking of permissible attributes.
     def profile_params
-      params.require(:profile).permit(:first, :last, :school, :blurb, :github, :website, :complete, :tshirt, :dietary, :travel, :stipend, :resume, :notes)
+      params.permit(:first, :last, :school, :blurb, :github, :website, :complete, :tshirt, :dietary, :travel, :stipend, :resume, :notes)
     end
 end

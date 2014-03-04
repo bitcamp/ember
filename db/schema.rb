@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20140303070029) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "complete"
     t.string   "tshirt"
     t.string   "dietary"
     t.string   "travel"
