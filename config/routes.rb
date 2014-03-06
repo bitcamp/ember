@@ -28,6 +28,9 @@ Ember::Application.routes.draw do
     put 'profile', to: "profile#update"
     get 'profile', to: "profile#read"
 
+    put 'login/reset', to: "reset#token"
+    post 'login/reset', to: "reset#reset"
+
 
 
 
