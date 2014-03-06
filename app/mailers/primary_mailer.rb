@@ -12,4 +12,9 @@ class PrimaryMailer < ActionMailer::Base
   	mail(to: email, body: content, 
   		content_type: "text/html", subject: "Confirm Bitca.mp Email")
   end
+
+  def reset(email, token)
+    content = '<h1>Hey!</h1><p> Your Bitca.mp account password has been successfully reset!</p><p><a href="https://bitca.mp/login/reset?token=' + token + '">Click here</a> to confirm your email and continue the registration process.</p> Please email hello@bitca.mp if you have any questions. </p><hr><p> Hack on, <br>Bitcamp Team </p>' 
+    mail(to: email, body: content, 
+      content_type: "text/html", subject: "Bitca.mp Password Reset")
 end
