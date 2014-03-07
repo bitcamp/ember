@@ -3,8 +3,10 @@ class ResetController < ApplicationController
         user = User.find_by_email(params[:email])
         if user
             reset = Reset.new(user: user)
-            message = PrimaryMailer.reset(user.email, reset.token)
-            message.deliver
+            if reset.save
+            	message = PrimaryMailer.reset(user.email, reset.token)
+            	message.deliver
+            end
         end
         render nothing: true
     end
