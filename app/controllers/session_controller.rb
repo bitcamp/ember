@@ -4,9 +4,9 @@ class SessionController < ApplicationController
 	def login
 		user = User.find_by_email(params[:email])
 		if user && user.authenticate(params[:password])
-			if !user.activate?(params[:token])
-				render :nothing => true, :status => :payment_required and return
-			end	
+#			if !user.activate?(params[:token])
+#				render :nothing => true, :status => :payment_required and return
+#			end	
 
 			Token.cleanup(user)
 			auth = Token.new(user: user)
@@ -24,9 +24,9 @@ class SessionController < ApplicationController
 		user = User.new(email: params[:email], password: params[:password], 
 			password_confirmation: params[:confirm])
 		if user.save()
-			message = PrimaryMailer.registration(user.email, user.active)
-			message.deliver
-			render nothing: true and return
+#			message = PrimaryMailer.registration(user.email, user.active)
+#			message.deliver
+			render :nothing => true and return
 		end
 		render :json => user.errors.messages, :status => :unauthorized
 	end

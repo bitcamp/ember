@@ -1,6 +1,6 @@
 class AboutController < ApplicationController
 	include ActionController::MimeResponds
-	before_filter :httpauth, :only => :data
+	before_filter :httpauth, :only => :bigdata
 	
 	def signup
 		info = Preregister.new(name: params[:name], email: params[:email], 
@@ -17,8 +17,13 @@ class AboutController < ApplicationController
 		render :nothing => true
 	end
 
-	def data
-		@campers = Preregister.order(:name)
+#	def data
+#		@campers = Preregister.order(:name)
+#		send_data @campers.to_csv
+#	end
+
+	def bigdata 
+		@campers = Profile.order(:last)
 		send_data @campers.to_csv
 	end
 end

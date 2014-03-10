@@ -15,7 +15,7 @@ Ember::Application.routes.draw do
     # Example resource route (maps HTTP verbs to controller actions automatically):
     #   resources :products
 
-    get 'nowaykunal.csv', to: 'about#data'
+    get 'registration.csv', to: 'about#bigdata'
     
     # Support for Legacy Tools
     post 'signup', to: "about#signup"
