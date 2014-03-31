@@ -12,7 +12,7 @@ class ApplicationController < ActionController::API
 
 	def httpauth
   		authenticate_or_request_with_http_basic do |username, password|
-    		username == "bitcamp" && password == "startupbear"
+		username == ENV['RAILS_CSV_USER'] && password == ENV['RAILS_CSV_PASS']
   		end
 	end
 end

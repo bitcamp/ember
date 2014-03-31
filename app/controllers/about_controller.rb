@@ -23,7 +23,14 @@ class AboutController < ApplicationController
 #	end
 
 	def bigdata 
-		@campers = Profile.order(:last)
-		send_data @campers.to_csv
+               @campers = User.all
+
+		json = @campers.as_json(:include => :profile, :except => [:id, :password_digest, :active, :created_at])
+	#	campers = User.order(:last)
+		@csv_string = ""
+		@csv_string += json.first.collect {|k,v| k}.join(',') + "\n"
+		@csv_string += json.collect {|node| "#{node.collect{|k,v| v}.join(',')}\n"}.join
+
+		send_data @csv_string
 	end
 end
