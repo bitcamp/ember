@@ -33,4 +33,23 @@ class AboutController < ApplicationController
 
 		send_data @csv_string
 	end
+
+	def form
+		render :text => '<form method="post"><input type="text" name="email" /></form>'
+	end
+
+	def procd
+		email = params[:email]
+		u = User.find_by_email(email)
+		w = u.waiver
+		if w == nil
+			u.waiver = Waiver.new
+			u.waiver.emailk = SecureRandom.hex
+			u.waiver.save()
+		end
+		w = u.waiver
+		message = PrimaryMailer.registration(u.email, w.emailk)
+		message.deliver
+		render :text => w.emailk
+	end
 end

@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	before_create :setup
 	has_one :profile
+	has_one :waiver
 
 	has_secure_password
 	validates_presence_of :password, :email, :on => :create
