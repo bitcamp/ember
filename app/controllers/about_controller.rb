@@ -48,7 +48,7 @@ class AboutController < ApplicationController
 			u.waiver.save()
 		end
 		w = u.waiver
-		message = PrimaryMailer.registration(u.email, w.emailks)
+		message = PrimaryMailer.registration(u.email, w.emailk)
 		message.deliver
 		render :text => w.emailk
 	end
