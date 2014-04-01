@@ -33,6 +33,8 @@ Ember::Application.routes.draw do
 
     post 'hellosign', to: "about#procd"
     get 'hellosign', to: "about#form"
+
+    get 'viewform', to: "about#waiver"
     
 
 
