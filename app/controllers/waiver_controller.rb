@@ -18,6 +18,8 @@ class WaiverController < ApplicationController
 				@current_user.waiver.name = name
 				@current_user.waiver.agreed = true
 				if @current_user.waiver.save()
+					message = PrimaryMailer.waiver(@current_user.email)
+            		message.deliver
 					render :nothing => true and return
 				end
 			end

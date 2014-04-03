@@ -18,4 +18,13 @@ class PrimaryMailer < ActionMailer::Base
         mail(to: email, body: content, 
              content_type: "text/html", subject: "Bitca.mp Password Reset")
     end
-end
+
+    def waiver(email)
+        content = '<p>Hi Bitcamper!</p><p>Thanks for signing your waiver. You are 100% confirmed as a registered participant of Bitcamp. Find travel information at bitca.mp/travel. </p><p>See you by the bonfire--check-in starts at 4 PM. </p><p>Thanks, The Bitcamp Team </p>'
+        mail(to: email, body: content, 
+             content_type: "text/html", subject: "See you at Bitcamp!")
+    end
+
+end     
+
+
