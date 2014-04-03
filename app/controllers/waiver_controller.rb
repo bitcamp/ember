@@ -11,13 +11,13 @@ class WaiverController < ApplicationController
 
 	def sign
 		profile = @current_user.profile
-		if profile != nil && profile.waiver == nil
+		if profile != nil
 			name = profile.first + " " + profile.last
 			if name == params[:name]
 				@current_user.waiver = Waiver.new
 				@current_user.waiver.name = name
 				@current_user.waiver.agreed = true
-				if @current_user.waiver.save()	
+				if @current_user.waiver.save()
 					message = PrimaryMailer.waiver(@current_user.email)
             		message.deliver
 					render :nothing => true and return
