@@ -11,7 +11,7 @@ class WaiverController < ApplicationController
 
 	def sign
 		profile = @current_user.profile
-		if profile != nil
+		if profile != nil && profile.waiver == nil
 			name = profile.first + " " + profile.last
 			if name == params[:name]
 				@current_user.waiver = Waiver.new
