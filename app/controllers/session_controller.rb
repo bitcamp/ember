@@ -33,7 +33,7 @@ class SessionController < ApplicationController
 
 	def logout 
 		Token.cleanup(@current_user)
-		render :nothing => true
+		render :nothing => true, :status => :bad_request
 	end
 
 end

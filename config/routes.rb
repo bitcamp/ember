@@ -31,10 +31,8 @@ Ember::Application.routes.draw do
     put 'login/reset', to: "reset#token"
     post 'login/reset', to: "reset#reset"
 
-    post 'hellosign', to: "about#procd"
-    get 'hellosign', to: "about#form"
-
-    get 'viewform', to: "about#waiver"
+    get 'waiver', to: "waiver#status"
+    post 'waiver', to: "waiver#sign"
     
 
 

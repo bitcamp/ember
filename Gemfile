@@ -27,4 +27,4 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'dotenv-rails'
 
 # Ruby version
-ruby '2.1.0'
+ruby '2.1.1'
