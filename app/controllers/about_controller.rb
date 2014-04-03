@@ -21,6 +21,11 @@ class AboutController < ApplicationController
 #		@campers = Preregister.order(:name)
 #		send_data @campers.to_csv
 #	end
+ 	def smalldata
+        @campers = Profile.all
+        send_data @campers.to_csv
+    end
+
 
 	def bigdata 
                @campers = User.all

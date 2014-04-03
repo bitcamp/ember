@@ -16,6 +16,7 @@ Ember::Application.routes.draw do
     #   resources :products
 
     get 'registration.csv', to: 'about#bigdata'
+    get 'mackenzie.csv', to: 'about#smalldata'
     
     # Support for Legacy Tools
     post 'signup', to: "about#signup"
