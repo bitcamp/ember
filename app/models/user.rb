@@ -26,14 +26,14 @@ class User < ActiveRecord::Base
 
 	def self.to_csv(options = {})
                 CSV.generate(options) do |csv|
-                        csv << ["first", "last", "email", "waiver"]
+                        csv << ["first", "last", "email", "school", "waiver"]
                         all.each do |camper|
                         		waiver = false
                         		if camper.waiver != nil && camper.waiver.agreed
                         			waiver = true
                         		end
                         		if camper.profile != nil
-                                	csv << [camper.profile.first, camper.profile.last, camper.email, waiver]
+                                	csv << [camper.profile.first, camper.profile.last, camper.email, camper.profile.school, waiver]
                                 end
                         end
                 end
