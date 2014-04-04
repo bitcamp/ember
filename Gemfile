@@ -25,6 +25,3 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Environmental variable loading gem
 gem 'dotenv-rails'
-
-# Ruby version
-ruby '2.1.1'

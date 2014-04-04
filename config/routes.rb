@@ -34,6 +34,9 @@ Ember::Application.routes.draw do
 
     get 'waiver', to: "waiver#status"
     post 'waiver', to: "waiver#sign"
+
+    get 'checkin', to: "checkin#view"
+    put 'checkin/:id', to: "checkin#update"
     
 
 
