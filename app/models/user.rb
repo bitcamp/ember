@@ -26,9 +26,15 @@ class User < ActiveRecord::Base
 
 	def self.to_csv(options = {})
                 CSV.generate(options) do |csv|
-                        csv << column_names
+                        csv << ["first", "last", "email", "waiver"]
                         all.each do |camper|
-                                csv << camper.attributes.values_at(*column_names)
+                        		waiver = false
+                        		if camper.waiver != nil && camper.waiver.agreed
+                        			waiver = true
+                        		end
+                        		if camper.profile != nil
+                                	csv << [camper.profile.first, camper.profile.last, camper.email, waiver]
+                                end
                         end
                 end
         end
