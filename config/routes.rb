@@ -19,10 +19,11 @@ Ember::Application.routes.draw do
     get 'mackenzie.csv', to: 'about#smalldata'
     
     # Support for Legacy Tools
+    get 'bitcamp', to: "about#heartbeat"
 =begin
 
     post 'signup', to: "about#signup"
-    get 'bitcamp', to: "about#heartbeat"
+    
 
     post 'login', to: "session#login"
     get 'logout', to: "session#logout"
