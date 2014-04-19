@@ -19,6 +19,8 @@ Ember::Application.routes.draw do
     get 'mackenzie.csv', to: 'about#smalldata'
     
     # Support for Legacy Tools
+=begin
+
     post 'signup', to: "about#signup"
     get 'bitcamp', to: "about#heartbeat"
 
@@ -37,6 +39,8 @@ Ember::Application.routes.draw do
 
     get 'checkin', to: "checkin#view"
     put 'checkin/:id', to: "checkin#update"
+=end
+
     
 
 
