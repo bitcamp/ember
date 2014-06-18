@@ -15,16 +15,16 @@ Ember::Application.routes.draw do
     # Example resource route (maps HTTP verbs to controller actions automatically):
     #   resources :products
 
-    get 'registration.csv', to: 'about#bigdata'
+    get 'registration.csv', to: 'about#data'
     get 'mackenzie.csv', to: 'about#smalldata'
     
     # Support for Legacy Tools
+
     get 'bitcamp', to: "about#heartbeat"
-=begin
 
     post 'signup', to: "about#signup"
     
-
+=begin
     post 'login', to: "session#login"
     get 'logout', to: "session#logout"
 

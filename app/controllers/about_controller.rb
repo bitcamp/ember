@@ -17,14 +17,15 @@ class AboutController < ApplicationController
 		render :nothing => true
 	end
 
-#	def data
-#		@campers = Preregister.order(:name)
-#		send_data @campers.to_csv
-#	end
+	def data
+		@campers = Preregister.order(:name)
+		send_data @campers.to_csv
+	end
+
  	def smalldata
-        @campers = Profile.all
-        send_data @campers.to_csv
-    end
+	        @campers = Profile.all
+	        send_data @campers.to_csv
+ 	end
 
 
 	def bigdata 
